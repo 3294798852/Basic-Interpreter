@@ -103,7 +103,7 @@ public:
 
 };
 
-/*
+/*=
  * Class: ConstantExp
  * ------------------
  * This subclass represents a constant integer expression.
@@ -232,7 +232,7 @@ public:
 
     virtual ~CompoundExp();
 
-    virtual int eval(EvalState &state);
+    virtual int eval(EvalState &state);//返回表达式的值
 
     virtual std::string toString();
 

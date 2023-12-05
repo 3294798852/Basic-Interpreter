@@ -109,7 +109,7 @@ int CompoundExp::eval(EvalState &state) {
         if (lhs->getType() == IDENTIFIER && lhs->toString() == "LET")
             error("SYNTAX ERROR");
         int val = rhs->eval(state);
-        state.setValue(((IdentifierExp *) lhs)->getName(), val);
+        state.setValue(((IdentifierExp *) lhs)->getName(), val);//Evalstate对象用于查找变量的值。
         return val;
     }
     int left = lhs->eval(state);

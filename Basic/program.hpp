@@ -148,7 +148,8 @@ private:
 
     // Fill this in with whatever types and instance variables you need
     //todo
-    std::map<int, std::string> data;
+    std::map<int, std::string> source_line;
+    std::map<int, Statement*> parse_line;
 };
 
 #endif

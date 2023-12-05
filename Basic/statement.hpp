@@ -83,5 +83,88 @@ public:
  * an Expression object), the class implementation must also
  * specify its own destructor method to free that memory.
  */
-
+class LET_Statement: public Statement{
+public:
+    LET_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class PRINT_Statement: public Statement{
+public:
+    PRINT_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class INPUT_Statement: public Statement{
+public:
+    INPUT_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class GOTO_Statement: public Statement{
+public:
+    GOTO_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class IF_Statement: public Statement{
+public:
+    IF_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class RUN_Statement: public Statement{
+public:
+    RUN_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class LIST_Statement: public Statement{
+public:
+    LIST_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class CLEAR_Statement: public Statement{
+public:
+    CLEAR_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class QUIT_Statement: public Statement{
+public:
+    QUIT_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class HELP_Statement: public Statement{
+public:
+    HELP_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class END_Statement: public Statement{
+public:
+    END_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
+class REM_Statement: public Statement{
+public:
+    REM_Statement(std::string);
+    virtual void execute(EvalState &state, Program &program);
+private:
+    TokenScanner scanner;
+};
 #endif
